@@ -19,10 +19,7 @@ class DbTasks {
           FROM ".$this->tableName);
 
         $sth->execute();
-        $result = $sth->fetchAll();
-
-
-        return $result;
+        return $sth->fetchAll();
     }
 
     public function getBy($column, $value) {
