@@ -1,8 +1,10 @@
 <?php
-
-use config\{Config, Connect};
+namespace orm7;
+use config\Connect;
 
 spl_autoload_register();
 
 $con = new Connect();
-$conf = new Config();
+$con->startConnection();
+
+echo nl2br("\n End");
