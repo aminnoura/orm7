@@ -1,6 +1,7 @@
 <?php
 namespace orm;
-class User extends dbTasks{
+
+class User extends DbTasks {
     private $id;
     private $firstname;
     private $lastname;
@@ -9,4 +10,9 @@ class User extends dbTasks{
     private $role;
     private $location;
     private $note;
+
+    public function __construct(){
+        // call parent constructor
+        parent::__construct();
+    }
 }
