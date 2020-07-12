@@ -22,7 +22,7 @@ class DbTasks {
         return $sth->fetchAll();
     }
 
-    public function getBy($column, $value) {
+    protected function getBy($column, $value) {
         $sth = $this->con->prepare("
           SELECT *
           FROM ".$this->tableName."
