@@ -31,4 +31,11 @@ class DbTasks {
 
         return $sth->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function __call($name, $arguments) {
+        if (strpos($name, 'getBy') === 0) {
+            $column = strtolower(substr($name,5));
+            return $this->getBy($column, $arguments[0]);
+        }
+    }
 }

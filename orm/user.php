@@ -1,6 +1,9 @@
 <?php
 namespace orm;
 
+/**
+ * @method getById(int $int)
+ */
 class User extends DbTasks {
     private $id;
     private $firstname;
